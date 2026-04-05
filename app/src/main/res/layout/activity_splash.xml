@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#000000">
+
+    <com.mwai.overlay.MatrixRainView
+        android:id="@+id/matrix_rain"
+        android:layout_width="match_parent" android:layout_height="match_parent"/>
+
+    <View android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="#CC000000"/>
+
+    <ScrollView android:id="@+id/layout_boot"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:padding="28dp" android:scrollbars="none">
+        <TextView android:id="@+id/tv_boot_text"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="#CC0000" android:textSize="13sp"
+            android:fontFamily="monospace" android:lineSpacingMultiplier="1.7"
+            android:layout_marginTop="80dp"/>
+    </ScrollView>
+
+    <LinearLayout android:id="@+id/layout_login"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_gravity="center" android:orientation="vertical"
+        android:padding="32dp" android:visibility="gone">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:text="[ MW_AI ]"
+            android:textColor="#CC0000" android:textSize="34sp" android:textStyle="bold"
+            android:fontFamily="monospace" android:letterSpacing="0.2"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:text="v4.0 // SYSTEM ACCESS"
+            android:textColor="#882222" android:textSize="11sp"
+            android:fontFamily="monospace" android:layout_marginBottom="36dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="&gt; ВВЕДИ ПОЗИВНИЙ:" android:textColor="#AA1111"
+            android:textSize="13sp" android:fontFamily="monospace" android:layout_marginBottom="10dp"/>
+
+        <EditText android:id="@+id/et_name"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_input" android:textColor="#CC0000"
+            android:textColorHint="#441111" android:hint="ім&#8217;я або код доступу..."
+            android:textSize="15sp" android:padding="14dp" android:fontFamily="monospace"
+            android:imeOptions="actionDone" android:inputType="text"
+            android:layout_marginBottom="16dp"/>
+
+        <Button android:id="@+id/btn_enter"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="[ УВІЙТИ ]" android:background="@drawable/bg_btn_primary"
+            android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold"
+            android:fontFamily="monospace"/>
+
+        <TextView android:id="@+id/tv_msg"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="#CC0000" android:textSize="12sp"
+            android:fontFamily="monospace" android:layout_marginTop="14dp"
+            android:visibility="gone"/>
+
+        <TextView android:id="@+id/tv_dev_badge"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="⚡ ROOT ACCESS // DEVELOPER MODE"
+            android:textColor="#FF4444" android:textSize="12sp"
+            android:textStyle="bold" android:fontFamily="monospace"
+            android:layout_marginTop="10dp" android:visibility="gone"/>
+    </LinearLayout>
+</FrameLayout>

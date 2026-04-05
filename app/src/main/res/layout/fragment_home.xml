@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="14dp" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout android:id="@+id/card_status"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_card" android:padding="14dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+            <View android:id="@+id/status_dot" android:layout_width="10dp" android:layout_height="10dp"
+                android:background="@drawable/bg_dot_inactive" android:layout_marginEnd="12dp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="// СТАТУС"
+                android:textColor="@color/text_hint" android:textSize="11sp" android:fontFamily="monospace"/>
+            <TextView android:id="@+id/tv_status"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="○ OFFLINE" android:textColor="@color/text_secondary"
+                android:textSize="13sp" android:textStyle="bold" android:fontFamily="monospace"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/card_actions"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_card" android:padding="14dp"
+            android:orientation="vertical" android:layout_marginBottom="10dp">
+            <Button android:id="@+id/btn_launch"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:text="▶  ЗАПУСТИТИ MW AI"
+                android:background="@drawable/bg_btn_primary"
+                android:textColor="#FFFFFF" android:textSize="15sp"
+                android:textStyle="bold" android:fontFamily="monospace"
+                android:layout_marginBottom="10dp"/>
+            <Button android:id="@+id/btn_stop"
+                android:layout_width="match_parent" android:layout_height="42dp"
+                android:text="■  ЗУПИНИТИ" android:background="@drawable/bg_btn_outline"
+                android:textColor="@color/accent_red" android:textSize="13sp"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/card_plan"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_card" android:padding="14dp"
+            android:orientation="vertical" android:layout_marginBottom="10dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="// ПЛАН" android:textColor="@color/text_hint"
+                android:textSize="11sp" android:fontFamily="monospace" android:layout_marginBottom="8dp"/>
+            <TextView android:id="@+id/tv_plan_info"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="13sp" android:fontFamily="monospace" android:layout_marginBottom="4dp"/>
+            <TextView android:id="@+id/tv_shots"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary" android:textSize="12sp"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_card" android:padding="14dp"
+            android:orientation="vertical" android:layout_marginBottom="14dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="// ІНСТРУКЦІЯ" android:textColor="@color/text_hint"
+                android:textSize="11sp" android:fontFamily="monospace" android:layout_marginBottom="8dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="① Запусти MW AI
+② Дозволи ПОВЕРХ ДОДАТКІВ
+③ Натисни ПОЧАТИ ЗАПИС
+
+[TAP] = аналіз
+[TAP TAP] = сховати
+[TAP TAP] на місці = показати
+[✕] = закрити панель
+[✕✕] = сховати все"
+                android:textColor="@color/text_secondary" android:textSize="12sp"
+                android:fontFamily="monospace" android:lineSpacingMultiplier="1.5"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
